@@ -7,3 +7,13 @@ select *
 from data_analyst_jobs
 limit 10;
 -- ExxonMobil
+-- How many postings are in Tennessee? How many are there in either Tennessee or Kentucky?
+select count(*)
+from data_analyst_jobs
+where location = 'TN';
+-- 21
+select count(*)
+from data_analyst_jobs
+where location = 'TN' OR location = 'KY';
+-- 27
+
